@@ -83,10 +83,9 @@ let btnFacts = document.querySelector('.facts__btn'),
 
 //Блок с слайдерами 
 
-
     document.addEventListener("DOMContentLoaded", function() {
         // Устанавливаем первый блок видимым при загрузке страницы
-        document.getElementById('block1').style.display = 'flex';
+        document.getElementById('block-global-1').style.display = 'flex';
         document.querySelector('button[data-block="1"]').classList.add('reduce__btn_action');
 
         let buttons = document.querySelectorAll('.reduce__btn');
@@ -99,7 +98,8 @@ let btnFacts = document.querySelector('.facts__btn'),
                 blocks.forEach(block => {
                     block.style.display = 'none';
                 });
-                document.getElementById('block' + blockNum).style.display = 'flex';
+
+                document.getElementById('block-global-' + blockNum).style.display = 'flex';
 
 
                 buttons.forEach(btn => {
@@ -111,17 +111,61 @@ let btnFacts = document.querySelector('.facts__btn'),
     });
 
 
-    
+
+    //внутриность блока со слайдером(переключение между вкладками)
+
+    document.addEventListener("DOMContentLoaded", function() {
+        // Устанавливаем первый блок видимым при загрузке страницы
+        document.getElementById('slider1').style.display = 'flex';
+        
+
+        let buttonsOption = document.querySelectorAll('.option__btn');
+        let blocksOption = document.querySelectorAll('.slider__content');
+
+        buttonsOption.forEach(button => {
+
+            button.addEventListener('click', function() {
+
+                let blockNum = this.getAttribute('data-option');
+
+                blocksOption.forEach(block => {
+                    block.style.display = 'none';
+                });
+
+                document.getElementById('slider' + blockNum).style.display = 'flex';
 
 
-// btnFacts.addEventListener('click', function(){
-//     blockFacts.classList.toggle('hide');
-//     blockContent.classList.toggle('show');
-// })
+                buttonsOption.forEach(btn => {
+                    btn.classList.remove('option__btn_active');
+                });
+                
+                this.classList.add('option__btn_active');
+            });
 
-// btnOnenBlock.addEventListener('click', function(){
-//     blockContent.classList
-// })  
+        });
+    });
+
+    let buttonsbtn = document.querySelectorAll('.option__btn_2');
+    let blocksContent = document.querySelectorAll('.slider__content_2');
+
+    buttonsbtn.forEach(button => {
+
+        button.addEventListener('click', function() {
+
+            let blockNum = this.getAttribute('data-btn');
+
+            blocksContent.forEach(block => {
+                block.style.display = 'none';
+            });
+
+            document.getElementById('content' + blockNum).style.display = 'flex';
 
 
-// 
+            buttonsbtn.forEach(btn => {
+                btn.classList.remove('option__btn_active');
+            });
+            
+            this.classList.add('option__btn_active');
+        });
+
+    });
