@@ -169,3 +169,7 @@ let btnFacts = document.querySelector('.facts__btn'),
         });
 
     });
+
+
+    
+    //блок diagram наведение на элементы
