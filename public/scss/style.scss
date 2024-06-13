@@ -421,10 +421,27 @@
         
                                 width: get-vw(111px, 1920);
                                 height: get-vw(30px, 1920);
-                                svg{
+
+                                position: relative;
+                                
+                                .eae__submit_img{
                                     width: 100%;
                                     height: 100%;
                                 }
+                             
+                                .eae__submit{
+                                    display: none;
+                                    justify-content: space-between;
+                                    align-items: center;
+
+                          
+                                    width: get-vw(111px, 1920);
+                                    height: get-vw(30px, 1920);
+
+                                    position: absolute;
+                                    background-color: #FEDEED;
+                                }
+                                
                             }
                             .eye__btn{
                                 display: flex;
@@ -440,12 +457,17 @@
                                 margin: 0;
                                 padding: 0;
     
+                                position: relative;
                                 cursor: pointer;
                                 svg{
                                     width: 100%;
                                     height: 100%;
                                 }
+                                .eye__btn_close{
+                                    display: none;
+                                }
                             }
+                           
                         }
                     }
 
@@ -1866,11 +1888,19 @@
     }
     
     
+   
  
-       
+    // .eye__btn_active{
+    //     display: flex;
+    //     border-bottom: get-vw(3px, 1920) solid #3F39A3;
+    //     position: absolute;
+    //     width: 100%;
+    //     height: auto;
+    //     transform: rotate(-22deg);
+    // }
    
     .show{
-        display: block;
+        display: flex !important;
     }
     
     .hide{

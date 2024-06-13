@@ -173,3 +173,27 @@ let btnFacts = document.querySelector('.facts__btn'),
 
     
     //блок diagram наведение на элементы
+
+
+
+    //блок с глазками
+
+    const buttons = document.querySelectorAll('.eye__btn');
+    const buttonsImg = document.querySelectorAll('eye__btn_img');
+    const buttonsImgTwo = document.querySelectorAll('eye__btn_close');
+    const contents = document.querySelectorAll('.eae__submit');
+    
+    buttons.forEach((button, index) => {
+        button.addEventListener('click', () => {
+          contents.forEach(content => {
+            content.classList.remove('show');
+            button.classList.remove('eye__btn_img')
+          });
+          contents[index].classList.add('show');
+          buttons[index].classList.add('eye__btn_close');
+        });
+    });
+
+
+
+    
