@@ -81,7 +81,7 @@ let btnFacts = document.querySelector('.facts__btn'),
 
 
 
-//Блок с слайдерами 
+    //Блок с слайдерами 
 
     document.addEventListener("DOMContentLoaded", function() {
         // Устанавливаем первый блок видимым при загрузке страницы
@@ -185,15 +185,76 @@ let btnFacts = document.querySelector('.facts__btn'),
     
     buttons.forEach((button, index) => {
         button.addEventListener('click', () => {
+
           contents.forEach(content => {
             content.classList.remove('show');
-            button.classList.remove('eye__btn_img')
+         
           });
           contents[index].classList.add('show');
-          buttons[index].classList.add('eye__btn_close');
+
         });
     });
 
+    // let previousButton = null;
+
+    // buttons.forEach((button, index) => {
+    //     button.addEventListener('click', () => {
+    //         if (previousButton !== null) {
+    //             previousButton.style.display = 'block'; // Возвращаем предыдущую кнопку
+    //         }
+
+    //         contents.forEach(content => {
+    //             content.classList.remove('show');
+    //         });
+
+    //         contents[index].classList.add('show');
+
+    //         button.style.display = 'none'; // Скрываем текущую кнопку
+    //         previousButton = button; // Сохраняем текущую кнопку как предыдущую
+    //     });
+    // });
 
 
     
+    //наведение на график
+
+    const circleOne = document.getElementById('one');
+    const circleTwo = document.getElementById('two');
+    const circleFree = document.getElementById('three');
+    const circleFour = document.getElementById('four');
+    const imgDiagramOne = document.querySelector('.block__down_img_1');
+    const imgDiagramTWo = document.querySelector('.block__down_img_2');
+    const imgDiagramThree = document.querySelector('.block__down_img_3');
+    const imgDiagramFour = document.querySelector('.block__down_img_4');
+
+    //1
+    circleOne.addEventListener('mouseover', function() {
+        imgDiagramOne.style.display = 'flex';
+    });
+    circleOne.addEventListener('mouseout', function() {
+        imgDiagramOne.style.display = 'none';
+    });
+
+    //2
+    circleTwo.addEventListener('mouseover', function() {
+        imgDiagramTWo.style.display = 'flex';
+    });
+    circleTwo.addEventListener('mouseout', function() {
+        imgDiagramTWo.style.display = 'none';
+    });
+
+    //3
+    circleFree.addEventListener('mouseover', function() {
+        imgDiagramThree.style.display = 'flex';
+    });
+    circleFree.addEventListener('mouseout', function() {
+        imgDiagramThree.style.display = 'none';
+    });
+
+    //4
+    circleFour.addEventListener('mouseover', function() {
+        imgDiagramFour.style.display = 'flex';
+    });
+    circleFour.addEventListener('mouseout', function() {
+        imgDiagramFour.style.display = 'none';
+    });

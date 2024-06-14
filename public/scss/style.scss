@@ -601,86 +601,93 @@
                             
                         }
                        
-                        .block__down{
+                        .block__box{
                             display: flex;
-                            justify-content: flex-start;
-                            align-items: flex-start;
-    
-                            width: get-vw(766px, 1920);
-                            height: get-vw(572px, 1920);
-
-
+                            width: 100%;
                             position: relative;
-
-               
-                            .block__down_img{
+                            .block__down{
+                                display: flex;
+                                justify-content: flex-start;
+                                align-items: flex-start;
+        
+                                width: get-vw(766px, 1920);
+                                height: get-vw(572px, 1920);
+    
+    
+                                position: relative;
+    
+                   
+                                .block__down_img{
+                                    width: 100%;
+                                    height: 100%;
+                                    z-index: 2;
+                                }
+                                
+                                img{
+                                    border-radius: get-vw(10px, 1920);
+                                    width: 100%;
+                                    height: 100%;  
+                                }                            
+                            }
+                            .block__indown{
+                                display: flex;
                                 width: 100%;
                                 height: 100%;
-                                z-index: 2;
-                            }
-                            
-                            img{
-                                border-radius: get-vw(10px, 1920);
-                                width: 100%;
-                                height: 100%;  
-                            }
-
-                            .block__down_img_1{
-                                width: get-vw(375px, 1920);
-                                height: auto;
-
                                 position: absolute;
-                                top: get-vw(50px, 1920);
-                                left: get-vw(200px, 1920);
+                                pointer-events: none;
+                                .block__down_img_1{
+                                    display: none;
+                                    z-index: 3;
 
-                                opacity: 0;
-                                will-change: opacity;
+                                    width: get-vw(375px, 1920);
+                                    height: auto;
+    
+                                    position: absolute;
+                                    top: get-vw(50px, 1920);
+                                    left: get-vw(200px, 1920);
 
-                            
-                            }   
-                            .block__down_img_2{
-                                width: get-vw(546px, 1920);
-                                height: auto;
+                                }   
+                                .block__down_img_2{
+                                    display: none;
+                                    z-index: 3;
 
-                                position: absolute;
+                                    width: get-vw(546px, 1920);
+                                    height: auto;
+    
+                                    position: absolute;
+    
+                                    top: get-vw(50px, 1920);
+                                    left: get-vw(150px, 1920);
 
-                                top: get-vw(50px, 1920);
-                                left: get-vw(150px, 1920);
-                                
-                                opacity: 0;
-                                will-change: opacity;
-                            }
-                            .block__down_img_3{
-                                width: get-vw(546px, 1920);
-                                height: auto;
+                                }
+                                .block__down_img_3{    
+                                    display: none;
+                                    z-index: 4;
 
-                                position: absolute;
-                                top: get-vw(300px, 1920);
-                                left: get-vw(350px, 1920);
+                                    width: get-vw(546px, 1920);
+                                    height: auto;
+    
+                                    position: absolute;
+                                    top: get-vw(300px, 1920);
+                                    left: get-vw(350px, 1920);
+                                }
+                                .block__down_img_4{
+                                    display: none;
+                                    z-index: 4;
 
-                                opacity: 0;
-                                will-change: opacity;
-                            }
-                            .block__down_img_4{
-                                width: get-vw(546px, 1920);
-                                height: auto;
-
-                                position: absolute;
-                                top: get-vw(300px, 1920);
-                                left: get-vw(-150px, 1920);
-
-                                opacity: 0;
-                                will-change: opacity;
-
-                         
-                            }
-                            .block__down_img path > .four:hover + .block__down_img_1{
-                                opacity: 1;
-                                z-index: 10;
+                                    width: get-vw(546px, 1920);
+                                    height: auto;
+    
+                                    position: absolute;
+                                    top: get-vw(300px, 1920);
+                                    left: get-vw(-150px, 1920);                             
+                                }
                             }
                         }
-                    }
 
+                       
+                    }
+                    
                     #one {
                         cursor: pointer;
                     }
@@ -693,7 +700,8 @@
                     #four {
                         cursor: pointer;
                     }
-
+                  
+                   
                     
                     
 
